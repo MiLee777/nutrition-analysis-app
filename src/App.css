@@ -2,29 +2,34 @@ body {
   background-image: url('./assets/berry.avif');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
 }
 
 .App {
-  width: 550px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
-.input-form {
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.input-form {
+  align-items: center;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   padding: 10px 15px;
   border-radius: 40px;
 }
 
 input {
-  color: #8f8f8f;
+  color: #000000;
   width: 100%;
   height: 35px;
   line-height: 35px;
   border: transparent;
+  font-family: "Montserrat", sans-serif;
 }
 
 i {
@@ -33,21 +38,20 @@ i {
 }
 
 button {
+  margin-top: 30px;
   padding: 15px 30px;
-  background-color: #8f8f8f;
+  font-family: "Montserrat", sans-serif;
+  background-color: #E26868;
+  color: #D8D9CF;
+  letter-spacing: 1px;
   border-radius: 20px;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.container {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-
 .container__info {
+  margin-top: 30px;
   justify-content: space-around;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
@@ -66,4 +70,20 @@ button {
 
 span {
   font-weight: bold;
+}
+
+h2,
+h3,
+h6,
+.par {
+  margin: 10px;
+}
+
+.daily__value {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.daily__calories {
+  font-size: 10px;
 }

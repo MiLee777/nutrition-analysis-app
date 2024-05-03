@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import ProductAnalysis from './ProductAnalysis';
 import DetailedProductAnalysis from './DetailedProductAnalysis';
@@ -28,6 +29,11 @@ function NutritionAnalysis() {
         setWordSubmittet(search)
     }
 
+    const newSearch = () => {
+        setSearch('');
+        setWordSubmittet('');
+    }
+
     const getNutrientValue = (nutrient) => {
         return product.totalNutrients && product.totalNutrients[nutrient] ? product.totalNutrients[nutrient].quantity : 0;
     }
@@ -42,7 +48,7 @@ function NutritionAnalysis() {
                 <h1>Nutrition Analysis</h1>
             </div>
             <div>
-                <form className='input-form' onSubmit={ searchByEnter }>
+                <form className='container input-form' onSubmit={ searchByEnter }>
                     <i className='fas fa-search'></i>
                     <input placeholder='Enter quantity, unit and product name (for example: 1 cup rice) ...'
                     onChange={ searchProduct }
@@ -51,6 +57,7 @@ function NutritionAnalysis() {
             </div>
             <div className="container">
                 <button onClick={ searchByEnter }>Analyze</button>
+                <button onClick={ newSearch }>new Analyze</button>
             </div>
             <div>
                 {product.ingredients && product.ingredients.length > 0 && product.ingredients[0].parsed && product.ingredients[0].parsed.length > 0 && (    
@@ -89,9 +96,7 @@ function NutritionAnalysis() {
                 ironNutrients={getNutrientValue('FE')}
                 ironDaily={getDailyValue('FE')}
                 potassiumNutrients={getNutrientValue('K')}
-                potassiumDaily={getDailyValue('K')}
-                
-                />
+                potassiumDaily={getDailyValue('K')} />
             </div>
         </div>
     );

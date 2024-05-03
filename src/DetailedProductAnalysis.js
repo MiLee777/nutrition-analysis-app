@@ -41,70 +41,70 @@ function DetailedProductAnalysis({
                 </div>
             </div>
             <hr/>
-            <div>
+            <div className='daily__value'>
                 <h6>% Daily Value*</h6>
             </div>
             <hr/>
             <div className='container__facts'>
-                <p><span>Total Fat</span> { fatNutrients.toFixed(1) } g</p>
+                <p className='par'><span>Total Fat</span> { fatNutrients.toFixed(1) } g</p>
                 <span>{ fatDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Saturated Fat { faSatNutrients.toFixed(1) } g</p>
+                <p className='par'>Saturated Fat { faSatNutrients.toFixed(1) } g</p>
                 <span>{ faSatDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Trans Fat { faTrnNutrients.toFixed(1) } g</p>
+                <p className='par'>Trans Fat { faTrnNutrients.toFixed(1) } g</p>
                 <span>{ faTrnDaily.toFixed() } %</span>
             </div>
             <hr/>
             <div className='container__facts'>
-                <p><span>Cholesterol</span> { choleNutrients.toFixed(1) } mg</p>
+                <p className='par'><span>Cholesterol</span> { choleNutrients.toFixed(1) } mg</p>
                 <span>{ choleDaily.toFixed() } %</span>
             </div>
             <hr/>
             <div className='container__facts'>
-                <p><span>Sodium</span> { sodiumNutrients.toFixed(1) } mg</p>
+                <p className='par'><span>Sodium</span> { sodiumNutrients.toFixed(1) } mg</p>
                 <span>{ sodiumDaily.toFixed() } %</span>
             </div>
             <hr/>
             <div className='container__facts'>
-                <p><span>Total Carbohydrate</span> { totalCarbNutrients.toFixed(1) } g</p>
+                <p className='par'><span>Total Carbohydrate</span> { totalCarbNutrients.toFixed(1) } g</p>
                 <span>{ totalCarbDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Dietary Fiber { fibersNutrients.toFixed(1) } g</p>
+                <p className='par'>Dietary Fiber { fibersNutrients.toFixed(1) } g</p>
                 <span>{ fibersDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Total Sugars { sugarNutrients.toFixed(1) } g</p>
+                <p className='par'>Total Sugars { sugarNutrients.toFixed(1) } g</p>
             </div>
             <div className='container__facts'>
-                <p>Includes - Added Sugars</p>
+                <p className='par'>Includes - Added Sugars</p>
             </div>
             <hr/>
             <div className='container__facts'>
-                <p><span>Protein</span> { proteinNutrients.toFixed(1) } g</p>
+                <p className='par'><span>Protein</span> { proteinNutrients.toFixed(1) } g</p>
                 <span>{ proteinDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Vitamin D { vitaminDNutrients.toFixed(1) } g</p>
+                <p className='par'>Vitamin D { vitaminDNutrients.toFixed(1) } g</p>
                 <span>{ vitaminDDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Calcium { calciumNutrients.toFixed(1) } g</p>
+                <p className='par'>Calcium { calciumNutrients.toFixed(1) } g</p>
                 <span>{ calciumDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Iron { ironNutrients.toFixed(1) } g</p>
+                <p className='par'>Iron { ironNutrients.toFixed(1) } g</p>
                 <span>{ ironDaily.toFixed() } %</span>
             </div>
             <div className='container__facts'>
-                <p>Potassium { potassiumNutrients.toFixed(1) } g</p>
+                <p className='par'>Potassium { potassiumNutrients.toFixed(1) } g</p>
                 <span>{ potassiumDaily.toFixed() } %</span>
             </div>
-            <div>
-                <p>*Percent Daily Values are based on a 2000 calorie diet</p>
+            <div className='container'>
+                <p className='daily__calories'>*Percent Daily Values are based on a 2000 calorie diet</p>
             </div>
         </div>
     )
