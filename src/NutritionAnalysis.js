@@ -16,6 +16,7 @@ function NutritionAnalysis() {
             const response = await fetch(`https://api.edamam.com/api/nutrition-data?app_id=${MY_ID}&app_key=${MY_KEY}&nutrition-type=cooking&ingr=${wordSubmitted}`);
             const data = await response.json();
             setProduct(data);
+            console.log(data)
         };
         nutritionAnalysisData();
     }, [wordSubmitted]);
@@ -70,7 +71,7 @@ function NutritionAnalysis() {
                 )}
             </div>
             <div>
-                <DetailedProductAnalysis
+                {/* <DetailedProductAnalysis
                 calories={product.calories}
                 fatNutrients={getNutrientValue('FAT')}
                 fatDaily={getDailyValue('FAT')}
@@ -96,7 +97,36 @@ function NutritionAnalysis() {
                 ironNutrients={getNutrientValue('FE')}
                 ironDaily={getDailyValue('FE')}
                 potassiumNutrients={getNutrientValue('K')}
-                potassiumDaily={getDailyValue('K')} />
+                potassiumDaily={getDailyValue('K')} /> */}
+                {product.ingredients && product.ingredients.length > 0 && product.ingredients[0].parsed && product.ingredients[0].parsed.length > 0 && (
+                    <DetailedProductAnalysis
+                    calories={product.calories}
+                    fatNutrients={getNutrientValue('FAT')}
+                    fatDaily={getDailyValue('FAT')}
+                    faSatNutrients={getNutrientValue('FASAT')}
+                    faSatDaily={getDailyValue('FASAT')}
+                    faTrnNutrients={getNutrientValue('FATRN')}
+                    faTrnDaily={getDailyValue('FATRN')}
+                    choleNutrients={getNutrientValue('CHOLE')}
+                    choleDaily={getDailyValue('CHOLE')}
+                    sodiumNutrients={getNutrientValue('NA')}
+                    sodiumDaily={getDailyValue('NA')}
+                    totalCarbNutrients={getNutrientValue('CHOCDF')}
+                    totalCarbDaily={getDailyValue('CHOCDF')} 
+                    fibersNutrients={getNutrientValue('FIBTG')}
+                    fibersDaily={getDailyValue('FIBTG')}
+                    sugarNutrients={getNutrientValue('SUGAR')}
+                    proteinNutrients={getNutrientValue('PROCNT')}
+                    proteinDaily={getDailyValue('PROCNT')}
+                    vitaminDNutrients={getNutrientValue('VITD')}
+                    vitaminDDaily={getDailyValue('VITD')}
+                    calciumNutrients={getNutrientValue('CA')}
+                    calciumDaily={getDailyValue('CA')}
+                    ironNutrients={getNutrientValue('FE')}
+                    ironDaily={getDailyValue('FE')}
+                    potassiumNutrients={getNutrientValue('K')}
+                    potassiumDaily={getDailyValue('K')} /> 
+                )}
             </div>
         </div>
     );
